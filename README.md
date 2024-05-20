@@ -1,54 +1,85 @@
 # Never Have I Ever
 
-A simple web-based "Never Have I Ever" game built with HTML, CSS, and JavaScript. The game features multiple categories of statements, and users can navigate between categories and get random statements.
+**"Never Have I Ever"** is a fun and interactive game built with React and Vite. It presents users with various categories of statements and allows them to select a category to reveal a random statement from that category. Players can enjoy the game with friends or on their own, discovering amusing and surprising facts about themselves and others.
 
 ## Features
 
-- Five categories: Popular, Teens, Party, Couple, Normal
-- Random statements for each category
-- Responsive design for different screen sizes
-- Smooth animations and hover effects
-- ~~Easy to add or modify statements via a JSON file~~
+- Choose from different categories such as Popular, Teens, Party, Couple, and Normal.
+- View a random statement from the selected category.
+- Easily navigate between categories and statements.
+- Sleek and responsive user interface.
+- Social media integration for sharing the game experience.
 
-![image](res/1.png)
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/arindal1/nhie-WebJSr.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd nhie-WebJS
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
 ## Usage
 
-1. **Choose a category:**
-   - Click on one of the categories (Popular, Teens, Party, Couple, Normal) on the category screen.
-   
-2. **View a statement:**
-   - A random "Never Have I Ever" statement from the chosen category will be displayed.
-   
-3. **Get a new statement:**
-   - Click the "New Statement" button to get another random statement from the same category.
-   
-4. **Return to the category screen:**
-   - Click the "Home" button to return to the category selection screen.
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+2. Open your browser and go to [http://localhost:3000](http://localhost:3000) to play the game.
+
+## How to Play
+
+1. Upon launching the game, you'll be presented with different categories of statements.
+2. Click on a category to reveal a random statement from that category.
+3. Enjoy the statement and have fun sharing your experiences with friends!
+
+![image](res/1.png)
 
 ## Project Structure
 
 ```
-never-have-i-ever-web-game/
-│
-├── index.html
+never-have-i-ever
+├── public
+│   ├── favicon.ico
+│   └── res
+├── res
+│    ├── icon.png
+│       ├── x.jpg
+│       ├── git.jpg
+│       └── in.jpg
 ├── src
-│    ├── styles.css
-│    ├── script.js
-│    └── nhie.json
-└── README.md
+│   ├── assets
+│   │   └── styles.css
+│   ├── components
+│   │   ├── CategoryScreen.jsx
+│   │   ├── StatementScreen.jsx
+│   │   └── Footer.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── styles.css
+│   ├── script.js
+│   └── nhie.json
+├── index.html
+├── README.md
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── vite.config.js
 ```
 
-- `index.html`: The main HTML file that contains the structure of the game.
-- `styles.css`: The CSS file for styling the game.
-- `script.js`: The JavaScript file that contains the game logic.
-- `nhie.json`: The JSON file that contains the statements for each category.
-- `README.md`: The readme file you are currently reading.
-
 ## Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## License
+
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
