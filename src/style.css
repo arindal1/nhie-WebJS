@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: 
+              /* Define a radial gradient as the second layer */
+              radial-gradient(circle at top left, #6f0050 0%, #001c4d 100%), 
+              /* Define another linear gradient with transparency */
+              linear-gradient(45deg, rgba(64, 64, 64, 0.3), rgba(255, 255, 255, 0.3));
+
+    /* Combine gradients using the background-blend-mode */
+    background-blend-mode: screen, multiply;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+#category-screen, #statement-screen {
+    text-align: center;
+    background: linear-gradient(135deg, #ffd6d8 0%, #ffbbee 100%), 
+              /* Define a radial gradient as the second layer */
+              radial-gradient(circle at top left, #fbc2eb 0%, #a6c1ee 100%), 
+              /* Define another linear gradient with transparency */
+              linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+
+  /* Combine gradients using the background-blend-mode */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 90%;
+    width: 700px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6200ea;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3700b3;
+    transform: scale(1.05);
+}
+
+#statement {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+#home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ff1744;
+}
+
+#home-button:hover {
+    background-color: #d50000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .icons {
+    display: flex;
+  }
+  
+  .icons .icon {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .icons .icon:hover {
+    transform: translateY(-5px);
+  }
+
+  .footer p {
+    color: aliceblue;
+    margin-top: 10px;
+  }
+
+  .icons .icon img{
+    height: 40px;
+    border-radius: 10%;
+  }
+
+  /* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    #category-screen, #statement-screen {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 16px;
+        margin: 8px;
+    }
+
+    #statement {
+        font-size: 1.2em;
+    }
+
+    .icons .icon img{
+        height: 30px;
+        border-radius: 10%;
+      }
+
+    .footer p{
+        text-align: center;
+        width: 300px;
+        font-size: small;
+    }
+}
